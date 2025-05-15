@@ -11,6 +11,43 @@ html {
     color: #151515;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(70, 61, 61, 0.493);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: blanchedalmond;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 700px; 
+    text-align: center;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.movie-poster-modal {
+    width: 350px;
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
 .movie-card {
     display: block;
     align-items: center;
@@ -23,11 +60,21 @@ html {
     text-transform: uppercase;
 }
 
-.movie-poster-container img {
+.movie-poster {
     margin-top: 2rem;
     height: 500px;
     border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+/* Hover effect */
+.movie-poster:hover {
+    transform: scale(1.1);
+    box-shadow: 8px 8px 8px -4px rgb(139, 133, 133);
+}
+
+.movie-poster-container {
     /* Animation */
     position: center;
     left: -50rem;
@@ -37,12 +84,6 @@ html {
 @keyframes fadeIn {
   0% { transform: translateY(5%); opacity: 0; }
   100% { transform: translateY(0%); opacity: 1; }
-}
-
-/* Hover effect */
-.movie-poster-container img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
 }
 
 .movie-rating {
