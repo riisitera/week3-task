@@ -115,6 +115,54 @@ html {
     letter-spacing: 0.1rem;
 }
 
+.movie-info-overview {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(98, 85, 68, 0.739);
+    font-size: 2rem;
+    color: #fff;
+    margin: 0.5rem;
+}
+
 .movie-info-actions {
     font-size:1.1rem;
 }
@@ -151,7 +199,8 @@ html {
 }
 
 footer {
-    margin-top: 2rem;
+    position: relative;
+    margin-top: 20rem;
     text-align: center;
     color: #777;
 }
